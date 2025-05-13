@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Decentralized Entertainment Ecosystem:Boom</title>
+  <title>Decentralized Entertainment:Boom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* ========== Global Styles ========== */
@@ -54,27 +54,33 @@
     }
 
     /* ========== Header ========== */
-    header.top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(15, 5, 29, 0.9) ;;
-      border-bottom: 0.5px solid black;
-      z-index: 2;
-      position: relative;
-    }
+  header.top-header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
 
-    .left-section {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+.logo-text {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
 
-    .logo-text {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
+.boom-line {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #a64eff, #e145ff);
+  box-shadow: 0 0 15px #a64eff88;
+}
+
+
 
     .center-title {
       position: absolute;
@@ -100,6 +106,26 @@
       -webkit-text-fill-color: transparent;
       margin-bottom: 1rem;
     }
+
+.subline {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #e145ff;
+  text-align: center;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
     .hero p {
       font-size: 1.2rem;
@@ -133,6 +159,68 @@
       flex-wrap: wrap;
     }
 
+.center-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.switch-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #cccccc;
+  transition: all 0.3s ease;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #e145ff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
+
+
     .clip-card {
       display: flex;
       align-items: center;
@@ -147,7 +235,7 @@
       border-radius: 2rem;
       text-decoration: none;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-       box-shadow: 0 0 15px #a64eff55;
+      box-shadow: 0 0 20px #a64eff55;
     }
 
     .clip-card:hover {
@@ -187,7 +275,7 @@
 }
 .marketing-image img:hover {
 transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
-  box-shadow: 0 17px 35px rgba(166, 78, 255, 0.6); /* Glowing hover shadow */
+  box-shadow: 0 24px 60px rgba(166, 78, 260, 0.6); /* Glowing hover shadow */
 }
 
 
@@ -273,16 +361,17 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   <canvas id="canvas"></canvas>
 
   <!-- Header -->
-  <header class="top-header">
-    <div class="left-section">
-      <span class="logo-text"><b>BOOM</b></span>
-    </div>
-    <div class="center-title"> </div>
-  </header>
+ <header class="top-header">
+  <h1 class="logo-text">BOOM</h1>
+  <hr class="boom-line">
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Simplifying discovery</h1>
+  
+
+
     <h2 style="font-size: 2.5rem; font-weight: bold; margin-top: 1rem; color: #e089ff;">Decentralized entertainment ecosystem</h2>
     <p>BOOM’s smart, transparent discovery system surfaces long-form, meaningful content based on quality, not popularity.
  No bias. Just great content, easily found. </p>
@@ -290,7 +379,13 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   <button class="btn">PRE-REGISTER FOR BETA ACCESS</button>
 </a>
 
-
+ <div class="center-box">
+  <p id="switchText" class="switch-text">Tired to find content</p>
+  <label class="switch">
+    <input type="checkbox" id="toggleSwitch" />
+    <span class="slider"></span>
+  </label>
+</div>
     <div class="preview">
       <a href="https://www.instagram.com/boom_socia_media_/?hl=en" class="clip-card">Instagram</a>
       <a href="https://www.linkedin.com/company/boom-socialmedia/?viewAsMember=true" class="clip-card">LinkedIn</a>
@@ -302,9 +397,10 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   <section class="marketing-section">
     <div class="marketing-container">
       <div class="marketing-image">
-             <a href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=HZkX8/6W9eAyQGEbA4gW0E6QT2vSbmANw7IO/IB03wE=" target="_blank">
+       <a href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=HZkX8/6W9eAyQGEbA4gW0E6QT2vSbmANw7IO/IB03wE=" target="_blank">
   <img src="boomindia_qrcode.png" alt="BOOM is Now Udyam Registered" style="max-width: 200px; border-radius: 12px;" />
 </a>
+
         <p class="image-caption">Scan or Click</p>
       </div>
       <div class="marketing-content">
@@ -461,6 +557,50 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     h = canvas.height = window.innerHeight;
   });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  const toggle = document.getElementById('toggleSwitch');
+  const text = document.getElementById('switchText');
+
+  toggle.addEventListener('change', () => {
+    if (toggle.checked) {
+      text.textContent = 'Simplify Discovery';
+      text.style.color = '#ff84e8';
+
+      // Confetti
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
+      // Popup
+      const popup = document.createElement('div');
+      popup.textContent = '🎉 Congratulations Boom Simplify your content discovery!';
+      popup.style.position = 'fixed';
+      popup.style.top = '20%';
+      popup.style.left = '50%';
+      popup.style.transform = 'translateX(-50%)';
+      popup.style.background = '#e145ff';
+      popup.style.color = 'white';
+      popup.style.padding = '1rem 2rem';
+      popup.style.fontSize = '1.2rem';
+      popup.style.borderRadius = '20px';
+      popup.style.zIndex = '9999';
+      popup.style.boxShadow = '0 0 20px rgba(0,0,0,0.3)';
+      document.body.appendChild(popup);
+
+      setTimeout(() => {
+        popup.remove();
+      }, 2500);
+
+    } else {
+      text.textContent = 'Tired to find content';
+      text.style.color = '#cccccc';
+    }
+  });
+</script>
+
 
 </body>
 </html>
