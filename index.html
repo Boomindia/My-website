@@ -386,7 +386,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   
 
 
-  <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: bold; margin-top: 1rem; color: #e089ff; white-space: nowrap;">
+    <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: bold; margin-top: 1rem; color: #e089ff;">
   Decentralized entertainment ecosystem
 </h2>
 
@@ -603,7 +603,8 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
       popup.style.color = 'white';
       popup.style.padding = '1rem 2rem';
       popup.style.fontSize = 'clamp(1rem, 2.5vw, 1.2rem)';
-      popup.style.borderRadius = '20px';
+    popup.style.borderRadius = 'clamp(10px, 2vw, 20px)';
+
       popup.style.zIndex = '9999';
       popup.style.boxShadow = '0 0 20px rgba(0,0,0,0.3)';
       document.body.appendChild(popup);
