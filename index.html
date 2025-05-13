@@ -386,9 +386,10 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   
 
 
-    <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: bold; margin-top: 1rem; color: #e089ff;">
+  <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: bold; margin-top: 1rem; color: #e089ff; white-space: nowrap;">
   Decentralized entertainment ecosystem
 </h2>
+
 
     <p>BOOM’s smart, transparent discovery system surfaces long-form, meaningful content based on quality, not popularity.
  No bias. Just great content, easily found. </p>
@@ -593,7 +594,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
 
       // Popup
       const popup = document.createElement('div');
-      popup.textContent = '🎉 Congratulations Boom Simplify your content discovery!';
+      popup.textContent = '🎉 Congratulations Boom will simplify your content discovery!';
       popup.style.position = 'fixed';
       popup.style.top = '20%';
       popup.style.left = '50%';
@@ -601,7 +602,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
       popup.style.background = '#e145ff';
       popup.style.color = 'white';
       popup.style.padding = '1rem 2rem';
-      popup.style.fontSize = '1.2rem';
+      popup.style.fontSize = 'clamp(1rem, 2.5vw, 1.2rem)';
       popup.style.borderRadius = '20px';
       popup.style.zIndex = '9999';
       popup.style.boxShadow = '0 0 20px rgba(0,0,0,0.3)';
