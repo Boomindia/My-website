@@ -63,7 +63,7 @@
 }
 
 .logo-text {
-  font-size: 3.5rem;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   font-weight: 800;
   color: white;
   letter-spacing: 3px;
@@ -87,7 +87,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1.4rem;
+     font-size: clamp(1rem, 2.5vw, 1.4rem);
       font-weight: bold;
     }
 
@@ -100,7 +100,7 @@
     }
 
     .hero h1 {
-      font-size: 4rem;
+      font-size: clamp(2rem, 5vw, 4rem);
       font-weight: 900;
       background: linear-gradient(90deg, #a64eff, #e145ff);
       -webkit-background-clip: text;
@@ -109,7 +109,8 @@
     }
 
 .subline {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+
   font-weight: 500;
   color: #e145ff;
   text-align: center;
@@ -129,7 +130,8 @@
 
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+
       color: #ccc;
       margin-bottom: 2rem;
       max-width: 600px;
@@ -169,7 +171,8 @@
 }
 
 .switch-text {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+
   font-weight: bold;
   color: #cccccc;
   transition: all 0.3s ease;
@@ -230,7 +233,8 @@ input:checked + .slider:before {
       justify-content: center;
       width: 200px;
       height: 120px;
-      font-size: 1.2rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+
       font-weight: bold;
       color: white;
       background-color: transparent;
@@ -284,7 +288,8 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
 
     .image-caption {
       margin-top: 0.5rem;
-      font-size: 0.9rem;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+
       color: #ccc;
     }
 
@@ -293,21 +298,25 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     }
 
     .marketing-subheading {
-      font-size: 0.85rem;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
+``
+
       text-transform: uppercase;
       color: white;
       margin-bottom: 0.5rem;
     }
 
     .marketing-heading {
-      font-size: 2.5rem;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+
       margin-bottom: 1rem;
       font-weight: bold;
       color: #c04bff;
     }
 
     .marketing-description {
-      font-size: 1.1rem;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+
       line-height: 1.6;
       margin-bottom: 2rem;
     }
@@ -325,7 +334,8 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     footer {
       padding: 2rem 1rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+
       z-index: 2;
       position: relative;
       background-color: #0f0f0f;
@@ -334,7 +344,8 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     /* ========== Responsive ========== */
     @media (max-width: 768px) {
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+
       }
 
       .marketing-container {
