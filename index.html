@@ -80,9 +80,18 @@
   box-shadow: 0 0 15px #a64eff88;
   margin-bottom: -1rem;
 }
+.responsive-heading {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #e089ff;
+  }
 
-
-
+  @media (max-width: 600px) {
+    .responsive-heading {
+      font-size: clamp(1.3rem, 4vw, 1.8rem);
+    }
+  }
     .center-title {
       position: absolute;
       left: 50%;
@@ -386,12 +395,12 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   
 
 
-    <h2 style="font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: bold; margin-top: 1rem; color: #e089ff;">
+   <h2 class="responsive-heading">
   Decentralized entertainment ecosystem
 </h2>
 
 
-    <p>BOOM’s smart, transparent discovery system surfaces long-form content based on quality, not popularity.
+    <p>BOOM’s AI, transparent discovery system surfaces long-form content based on quality, not popularity.
  No bias. Just great content, easily found. </p>
     <a href="https://forms.gle/iCrX5rjmSDLqyrNr8" target="_blank">
   <button class="btn">PRE-REGISTER FOR BETA ACCESS</button>
