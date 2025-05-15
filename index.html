@@ -11,6 +11,29 @@
       padding: 0;
       box-sizing: border-box;
     }
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+#animated-text {
+  animation: zoomInOut 12s ease-in-out infinite;
+  margin-top: 200px;    /* Increase gap above */
+  margin-bottom: 150px; /* Increase gap below */
+   font-size: 4rem;
+    text-align: center;
+    background: linear-gradient(90deg, #00BFFF, #FF00FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
 
     body, html {
       font-family: 'Inter', sans-serif;
@@ -19,6 +42,71 @@
       overflow-x: hidden;
       position: relative;
     }
+.ai-section {
+  background: radial-gradient(
+    circle at top,
+    rgba(15, 12, 41, 0.4),
+    rgba(48, 43, 99, 0.4),
+    rgba(36, 36, 62, 0.4)
+  );
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+
+  box-shadow:
+    0 0 30px rgba(128, 0, 255, 0.5),
+    0 0 60px rgba(128, 0, 255, 0.3),
+    0 0 100px rgba(128, 0, 255, 0.2);
+
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 30px rgba(128, 0, 255, 0.5),
+      0 0 60px rgba(128, 0, 255, 0.3),
+      0 0 100px rgba(128, 0, 255, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(128, 0, 255, 0.6),
+      0 0 80px rgba(128, 0, 255, 0.4),
+      0 0 120px rgba(128, 0, 255, 0.3);
+  }
+}
+
+.ai-icon {
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.ai-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.ai-subtext {
+  font-size: 1.25rem;
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.ai-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.ai-link:hover {
+  text-decoration: underline;
+}
 
     canvas {
       position: absolute;
@@ -419,6 +507,17 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
       <a href="mailto:team@boomofficial.com" class="clip-card">Email</a>
     </div>
   </section>
+<section class="ai-section">
+  <div class="ai-content">
+    <img src="AI.png" alt="AI Icon" class="ai-icon" />
+    <h1 class="ai-heading">This Time, India Leads Global Tech</h1>
+    <p class="ai-subtext">
+     Indians built the audience—others took the power. No more. BOOM is India’s own social media revolution. Decentralized. Creator-first. Future-ready. This time, India leads. This time, we BOOM.
+    </p>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7324496633021272064" class="ai-link">Learn More →</a>
+  </div>
+</section>
+<h1 id="animated-text"></h1>
 
   <!-- Marketing Section -->
   <section class="marketing-section">
@@ -457,7 +556,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
       x: Math.random() * w,
       y: Math.random() * h,
       radius: Math.random() * 1.5,
-      speed: Math.random() * 0.2 + 0.06
+      speed: Math.random() * 0.5 + 0.2
     }));
 
     function drawStars() {
@@ -629,6 +728,18 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
   });
 </script>
 
+<script>
+    const texts = ["Blockchain", "Artificial Intelligence", "Web3"];
+    let index = 0;
+    const animatedText = document.getElementById('animated-text');
 
+    function updateText() {
+      animatedText.textContent = texts[index];
+      index = (index + 1) % texts.length;
+    }
+
+    updateText();
+    setInterval(updateText, 3000);
+  </script>
 </body>
 </html>
