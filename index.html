@@ -24,7 +24,7 @@
 }
 
 #animated-text {
-  animation: zoomInOut 8s ease-in-out infinite;
+  animation: zoomInOut 3s ease-in-out infinite;
   margin-top: 200px;    /* Increase gap above */
   margin-bottom: 150px; /* Increase gap below */
    font-size: clamp(1.8rem, 6vw, 4rem);
@@ -426,6 +426,10 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     flex-direction: column;   /* Stack items vertically */
     gap: 1rem;                /* Reduce space between items */
   }
+.marketing-section {
+            margin-bottom: -10rem;
+    }
+
 
   .marketing-image {
     margin-bottom: -5rem;    /* Reduce space below image */
@@ -759,7 +763,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     }
 
     updateText();
-    setInterval(updateText, 8000);
+    setInterval(updateText, 3000);
   </script>
 </body>
 </html>
