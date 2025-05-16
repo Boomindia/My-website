@@ -24,7 +24,7 @@
 }
 
 #animated-text {
-  animation: zoomInOut 10s ease-in-out infinite;
+  animation: zoomInOut 8s ease-in-out infinite;
   margin-top: 200px;    /* Increase gap above */
   margin-bottom: 150px; /* Increase gap below */
    font-size: clamp(1.8rem, 6vw, 4rem);
@@ -358,6 +358,7 @@ input:checked + .slider:before {
       padding: 4rem 2rem;
       position: relative;
       z-index: 2;
+      margin-bottom: -2rem;
     }
 
     .marketing-container {
@@ -758,7 +759,7 @@ transition: transform 0.5s ease, box-shadow 0.5s ease; /* Slight zoom effect */
     }
 
     updateText();
-    setInterval(updateText, 9800);
+    setInterval(updateText, 8000);
   </script>
 </body>
 </html>
